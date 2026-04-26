@@ -37,3 +37,8 @@ git push -u origin main
 🎉 Done!
 
 Now your project is connected to GitHub.
+
+Remove unnecessary file 
+git rm -r --cached node_modules
+git rm -r --cached backend/node_modules
+git rm -r --cached mobile/node_modules
