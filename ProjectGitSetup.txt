@@ -1,0 +1,39 @@
+1. Initialize Git in your folder
+
+In your terminal (you’re already inside Xclone):
+
+git init
+
+This creates a local Git repository.
+
+✅ 2. Add your files
+
+If your folder is empty, create a file first (like README.md or your project files).
+
+Then run:
+
+git add .
+
+This stages all files.
+
+✅ 3. First commit
+git commit -m "Initial commit"
+✅ 4. Create repository on GitHub
+
+Go to GitHub and:
+
+Click New Repository
+Name it: Xclone
+Do NOT initialize with README (important)
+Click Create
+✅ 5. Connect local repo to GitHub
+
+GitHub will show commands. Use:
+
+git remote add origin https://github.com/YOUR_USERNAME/Xclone.git
+✅ 6. Push your code
+git branch -M main
+git push -u origin main
+🎉 Done!
+
+Now your project is connected to GitHub.

@@ -1,0 +1,16 @@
+1.Create Expo project
+->npx create-expo-app@latest .
+
+Note: npx create-expo-app automatically initializes Git inside the mobile folder
+So it creates a .git folder there.
+
+2.How to remove Git from Expo project (Windows)
+
+You need to delete the hidden .git folder inside mobile.
+
+🔹 Step 1: Go inside mobile folder
+cd D:\GitHubRepository\XClone\mobile
+🔹 Step 2: Delete .git
+✔️ CMD (Command Prompt)
+rmdir /s /q .git
+

@@ -1,0 +1,42 @@
+✅ 1. Create backend folder (if not already)
+
+Inside your Xclone project:
+
+mkdir backend
+cd backend
+✅ 2. Initialize Node project
+npm init -y
+✅ 3. Replace your package.json
+
+Open package.json and paste your config (what you sent).
+Make sure it looks like this (important parts only):
+
+{
+  "name": "backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  }
+}
+✅ 4. Install dependencies
+
+Run this:
+
+npm install @arcjet/inspect @arcjet/node @clerk/express cloudinary cors dotenv express express-async-handler mongoose multer
+✅ 5. Create project structure
+
+Now create a clean backend structure:
+
+mkdir src
+cd src
+mkdir controllers routes models middleware config utils
+touch server.js app.js
+✅ 6. Basic server setup
+
+7. Adding 
+ "types": "module",
+
+ 8.Run a server 
+ ->npm run dev
