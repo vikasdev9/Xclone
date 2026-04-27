@@ -40,3 +40,46 @@ touch server.js app.js
 
  8.Run a server 
  ->npm run dev
+
+ 9.Mongodb Ip Access List 
+ -> Allow Acesss Anywhere  - 0.0.0.0/0
+
+ 10.testing MongoDb setup  by inserting Dummy data
+ const startServer = async () => {
+  try {
+    await connectDB();
+
+    // 👉 INSERT DUMMY USER (only for testing)
+    const existingUser = await User.findOne({ email: "test@example.com" });
+
+    if (!existingUser) {
+      const user = await User.create({
+        clerkId: "test_clerk_" + Date.now(),
+        email: "test@example.com",
+        firstName: "Vikas",
+        lastName: "Chauhan",
+        username: "vikas_" + Date.now(),
+        bio: "Dummy user for testing",
+        location: "India",
+      });
+
+      console.log("Dummy user created ✅", user.username);
+    } else {
+      console.log("Dummy user already exists ⚠️");
+    }
+
+    // start server
+    if (ENV.NODE_ENV !== "production") {
+      app.listen(5001, () =>
+        console.log("Server is up and running on PORT:", 5001)
+      );
+    }
+  } catch (error) {
+    console.error("Failed to start server:", error.message);
+    process.exit(1);
+  }
+};
+
+
+Note 
+.env file must be outside the src folder
