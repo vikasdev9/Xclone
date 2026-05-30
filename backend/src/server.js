@@ -13,6 +13,21 @@ import { arcjetMiddleware } from "./middleware/arcjet.middleware.js";
 
 const app = express();
 
+// Validate required environment variables
+const missingEnvVars = [];
+if (!ENV.CLERK_SECRET_KEY) missingEnvVars.push("CLERK_SECRET_KEY");
+if (!ENV.CLOUDINARY_CLOUD_NAME) missingEnvVars.push("CLOUDINARY_CLOUD_NAME");
+if (!ENV.CLOUDINARY_API_KEY) missingEnvVars.push("CLOUDINARY_API_KEY");
+if (!ENV.CLOUDINARY_API_SECRET) missingEnvVars.push("CLOUDINARY_API_SECRET");
+
+if (missingEnvVars.length > 0) {
+  console.error(
+    `ERROR: Missing required environment variables:\n${missingEnvVars.map((v) => `  - ${v}`).join("\n")}\n` +
+    `Add these to your .env file or deployment environment variables.`,
+  );
+  process.exit(1);
+}
+
 app.use(cors());
 app.use(express.json());
 

@@ -77,6 +77,11 @@ export const createPost = asyncHandler(async (req, res) => {
   // upload image to Cloudinary if provided
   if (imageFile) {
     try {
+      if (!process.env.CLOUDINARY_CLOUD_NAME) {
+        console.error("[createPost] CLOUDINARY_CLOUD_NAME not set");
+        return res.status(500).json({ error: "Image upload service not configured" });
+      }
+
       // convert buffer to base64 for cloudinary
       const base64Image = `data:${imageFile.mimetype};base64,${imageFile.buffer.toString(
         "base64"
@@ -93,8 +98,14 @@ export const createPost = asyncHandler(async (req, res) => {
       });
       imageUrl = uploadResponse.secure_url;
     } catch (uploadError) {
-      console.error("Cloudinary upload error:", uploadError);
-      return res.status(400).json({ error: "Failed to upload image" });
+      console.error(
+        "[createPost] Cloudinary upload failed:",
+        uploadError.message || uploadError,
+      );
+      return res.status(400).json({
+        error: "Failed to upload image",
+        details: uploadError.message || "Unknown error",
+      });
     }
   }
 
