@@ -72,3 +72,16 @@ XClone/
 │   ├── hooks/
 │   ├── utils/
 │   └── assets/
+```
+
+---
+
+# 📸 App Screenshots
+
+![XClone Main Screen](mobile/assets/AppScreenShot/Xclone.png)
+
+![Profile Section](mobile/assets/AppScreenShot/ProfilleSection.png)
+
+![App Screenshot 1](mobile/assets/AppScreenShot/Screenshot%202026-05-30%20185648.png)
+
+![App Screenshot 2](mobile/assets/AppScreenShot/Screenshot%202026-05-30%20185710.png)
