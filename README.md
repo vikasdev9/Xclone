@@ -2,6 +2,25 @@
 
 A modern full-stack social media mobile application built with **React Native (Expo)**, **Express.js**, **MongoDB**, **Clerk Authentication**, and **Cloudinary**.
 
+## 📸 App Screenshots
+
+<table>
+	<tr>
+		<td align="center">
+			<strong>Home</strong><br/>
+			<img src="mobile/assets/AppScreenShot/Xclone.png" alt="XClone Main Screen" width="180"/>
+		</td>
+		<td align="center">
+			<strong>Profile</strong><br/>
+			<img src="mobile/assets/AppScreenShot/ProfilleSection.png" alt="Profile Section" width="180"/>
+		</td>
+		<td align="center">
+			<strong>Feed</strong><br/>
+			<img src="mobile/assets/AppScreenShot/Screenshot%202026-05-30%20185648.png" alt="App Screenshot" width="180"/>
+		</td>
+	</tr>
+</table>
+
 ---
 
 # 📱 App Features Overview
@@ -74,14 +93,3 @@ XClone/
 │   └── assets/
 ```
 
----
-
-# 📸 App Screenshots
-
-![XClone Main Screen](mobile/assets/AppScreenShot/Xclone.png)
-
-![Profile Section](mobile/assets/AppScreenShot/ProfilleSection.png)
-
-![App Screenshot 1](mobile/assets/AppScreenShot/Screenshot%202026-05-30%20185648.png)
-
-![App Screenshot 2](mobile/assets/AppScreenShot/Screenshot%202026-05-30%20185710.png)
